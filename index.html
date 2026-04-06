@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>главная</title>
+</head>
+
+<body class="theme-dark">
+    <header>
+        <button type="button" id="select"><img src="./img/солнце.svg" alt="light theme"></button>
+    </header>
+    <main>
+        <!-- Выпадающее окно -->
+        <div class="sett" id="sett">
+            <div class="sett-header">
+                <button class="close-sett" id="closeSett"><img src="img/крест Б.svg" alt="close"></button>
+            </div>
+            <div>
+                <div class="filter-group" id="filterGroup" style="margin-top: 50px;">
+                    <div class="lab" id="lab">
+                        <label style="font-weight: 100;">ARTIST</label>
+                        <div class="icon">+</div>
+                    </div>
+                    <select class="artistFilter" id="artistFilter">
+                        <option value="ARTIST">selct the artist</option>
+                        <option value="ARTIST">CASCATE DI TIVOLI</option>
+                        <option value="ARTIST">PORTPAIT OF VINCENT VAN GOGH</option>
+                        <option value="ARTIST">UNEQUAL MARRIAGE</option>
+                        <option value="ARTIST">THE HAPPY VIOLINIST</option>
+                        <option value="ARTIST">THE ARCADIAN</option>
+                        <option value="ARTIST">GOLFO DI NAPOLI</option>
+                    </select>
+                </div>
+                <div class="filter-group" id="filterGroup">
+                    <div class="lab" id="lab">
+                        <label style="font-weight: 100;">LOCATION</label>
+                        <div class="icon">+</div>
+                    </div>
+                    <select class="artistFilter" id="artistFilter">
+                        <option value="all">selct the location</option>
+                        <option value="CASCATE DI TIVOLI">JEAN-HONORE FRAGONARD</option>
+                    </select>
+                </div>
+                <div class="filter-group" id="filterGroup">
+                    <div class="lab" id="lab">
+                        <label style="font-weight: 100;">YEARS</label>
+                        <div class="icon">+</div>
+                    </div>
+                    <div class="years-group" id="artistFilter">
+                        <input type="number" class="artistFilter" placeholder="From" min="0" max="2026"
+                            style="width: 100px; margin-right: 20px;">
+                        <input type="number" class="artistFilter" placeholder="To" min="0" max="2026"
+                            style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-actions" style="display: flex; align-items: end;">
+                <button class="btn-show" id="applyFilterBtn">SHOW THE RESULTS</button>
+                <button class="btn-clear" id="clearFilterBtn">CLEAR</button>
+            </div>
+        </div>
+        <!-- Поиск -->
+        <div class="search-container">
+            <input type="search" id="searchInput" placeholder="Painting title">
+            <button type="button" id="setting"><img src="./img/настройки Б.svg" alt="settings"></button>
+        </div>
+        <!-- Картины -->
+        <div class="img-container">
+            <div class="img-card">
+                <img src="./img/CASCATE DI TIVOLI.svg" alt="CASCATE DI TIVOLI">
+                <div class="img-info-container">
+                    <div class="img-info">
+                        <div class="img-info-name">
+                            <p style="font-weight: 100;">CASCATE DI TIVOLI</p>
+                            <p class="num">LOUVRE MUSEUM</p>
+                        </div>
+                        <div class="img-info-location">
+                            <p style="font-weight: 100;">JEAN-HONORE FRAGONARD</p>
+                            <p class="num">1761</p>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <img src="img/стрелка Б.svg">
+                    </div>
+                </div>
+
+            </div>
+            <div class="img-card">
+                <img src="./img/PORTPAIT OF VINCENT VAN GOGH.svg" alt="PORTPAIT OF VINCENT VAN GOGH">
+                <div class="img-info-container">
+                    <div class="img-info">
+                        <div class="img-info-name">
+                            <p style="font-weight: 100;">CASCATE DI TIVOLI</p>
+                            <p class="num">LOUVRE MUSEUM</p>
+                        </div>
+                        <div class="img-info-location">
+                            <p style="font-weight: 100;">PORTPAIT OF VINCENT VAN GOGH</p>
+                            <p class="num">1886</p>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <img src="img/стрелка Б.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="img-card">
+                <img src="./img/UNEQUAL MARRIAGE.svg" alt="UNEQUAL MARRIAGE">
+                <div class="img-info-container">
+                    <div class="img-info">
+                        <div class="img-info-name">
+                            <p style="font-weight: 100;">CASCATE DI TIVOLI</p>
+                            <p class="num">LOUVRE MUSEUM</p>
+                        </div>
+                        <div class="img-info-location">
+                            <p style="font-weight: 100;">UNEQUAL MARRIAGE</p>
+                            <p class="num">1862</p>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <img src="img/стрелка Б.svg">
+                    </div>
+                </div>
+
+            </div>
+            <div class="img-card">
+                <img src="./img/THE HAPPY VIOLINIST.svg" alt="THE HAPPY VIOLINIST">
+                <div class="img-info-container">
+                    <div class="img-info">
+                        <div class="img-info-name">
+                            <p style="font-weight: 100;">CASCATE DI TIVOLI</p>
+                            <p class="num">LOUVRE MUSEUM</p>
+                        </div>
+                        <div class="img-info-location">
+                            <p style="font-weight: 100;">THE HAPPY VIOLINIST</p>
+                            <p class="num">1624</p>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <img src="img/стрелка Б.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="img-card">
+                <img src="./img/THE ARCADIAN.svg" alt="THE ARCADIAN">
+                <div class="img-info-container">
+                    <div class="img-info">
+                        <div class="img-info-name">
+                            <p style="font-weight: 100;">CASCATE DI TIVOLI</p>
+                            <p class="num">LOUVRE MUSEUM</p>
+                        </div>
+                        <div class="img-info-location">
+                            <p style="font-weight: 100;">THE ARCADIAN</p>
+                            <p class="num">1834</p>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <img src="img/стрелка Б.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="img-card">
+                <img src="./img/GOLFO DI NAPOLI.svg" alt="GOLFO DI NAPOLI">
+                <div class="img-info-container">
+                    <div class="img-info">
+                        <div class="img-info-name">
+                            <p style="font-weight: 100;">CASCATE DI TIVOLI</p>
+                            <p class="num">LOUVRE MUSEUM</p>
+                        </div>
+                        <div class="img-info-location">
+                            <p style="font-weight: 100;">GOLFO DI NAPOLI</p>
+                            <p class="num">1845</p>
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <img src="img/стрелка Б.svg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Навигация -->
+        <div class="nav">
+            <input type="image" src="img/стрелка ЛБ.svg" alt="previous">
+            <input type="button" value="1" class="action">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="...">
+            <input type="button" value="9">
+            <input type="image" src="img/стрелка ПБ.svg" alt="next">
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
