@@ -1,13 +1,13 @@
 /* списки в выпадающем окне */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     const filterGroups = document.querySelectorAll('.filter-group');
-    
+
     filterGroups.forEach(group => {
         const labelDiv = group.querySelector('.lab');
         const iconSpan = labelDiv.querySelector('.icon');
         const content = group.querySelector('.artistFilter, .years-group');
-        
+
         if (content && content.style.display !== 'none') {
             iconSpan.textContent = '+';
             content.style.display = 'none';
@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
             iconSpan.textContent = '-';
             content.style.display = 'block';
         }
-        
-        labelDiv.addEventListener('click', function(e) {
+
+        labelDiv.addEventListener('click', function (e) {
             e.stopPropagation();
-            
+
             if (content.style.display === 'none') {
                 content.style.display = 'block';
                 iconSpan.textContent = '-';
@@ -32,17 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* выпадающее окно */
 const closeButton = document.getElementById('closeSett');/*крестик*/
+const closeButtonImg = closeButton ? closeButton.querySelector('img') : null;
 const settingsBlock = document.getElementById('sett');/*окно*/
 const settingButton = document.getElementById('setting');/*настройки*/
 
 if (closeButton) {
-    closeButton.addEventListener('click', function() {
+    closeButton.addEventListener('click', function () {
         settingsBlock.style.display = 'none';
     });
 }
 
 if (settingButton) {
-    settingButton.addEventListener('click', function() {
+    settingButton.addEventListener('click', function () {
         settingsBlock.style.display = 'block';
     });
 }
@@ -53,35 +54,40 @@ const body = document.body;
 const themeButton = document.getElementById('select');
 if (themeButton) {
     const themeIcon = themeButton.querySelector('img');
-    
-    // функция переключения темы
+
     function darkLight() {
         if (dark) {
-            // переключаем на светлую тему
             body.classList.remove('theme-dark');
             body.classList.add('theme-light');
             if (themeIcon) {
                 themeIcon.src = './img/луна.svg';
                 themeIcon.alt = 'dark theme';
             }
+            if (closeButtonImg) {
+                closeButtonImg.src = './img/крест Ч.svg';
+                closeButtonImg.alt = 'close';
+            }
+
         } else {
-            // переключаем на темную тему
             body.classList.remove('theme-light');
             body.classList.add('theme-dark');
             if (themeIcon) {
                 themeIcon.src = './img/солнце.svg';
                 themeIcon.alt = 'light theme';
             }
+            if (closeButtonImg) {
+                closeButtonImg.src = './img/крест Б.svg';
+                closeButtonImg.alt = 'close';
+            }
         }
-        
+
         dark = !dark;
     }
-    
-    // добавляем обработчик события на кнопку
+
     themeButton.addEventListener('click', darkLight);
 }
 
-// устанавливаем начальную тему (темная)
+// начальная тема
 if (body) {
     body.classList.add('theme-dark');
 }
