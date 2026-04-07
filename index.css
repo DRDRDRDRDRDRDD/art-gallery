@@ -74,6 +74,7 @@ header {
     display: flex;
     justify-content: end;
     margin-bottom: 20px;
+    transition: background-color 0.3s ease;
 }
 
 header button {
